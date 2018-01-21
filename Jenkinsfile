@@ -4,7 +4,9 @@ import groovy.json.JsonSlurper
 import java.net.URL
 
 pipeline {
-    agent linux
+    agent { 
+        label 'linux'
+    }
     options {
         timeout(time: 1, unit: 'DAYS')
         disableConcurrentBuilds()
